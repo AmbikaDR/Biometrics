@@ -2,15 +2,10 @@ clear all;
 close all;
 clc;
 
-% I = imread('3d1.jpg');
-t=2;
-cd('/Users/ambikasatish/Desktop/PhD_26.3.15/PhD/database/3D face casia/sub1to10');
 cd('sub2_session2');
     str=strcat('sub2_session2_frame',int2str(t),'.png');   
     eval('J=imread(str);');
-cd('/Users/ambikasatish/Desktop/PhD_26.3.15/PhD/MATLAB/Biometrics/LB operator/LB_FEM');
 
-% % % % trial
 imgrgb =rgb2gray(imresize(J,[512,512]));
 I = (imcrop(imgrgb,[1,1,512,204]));
 val = max(max(I));
